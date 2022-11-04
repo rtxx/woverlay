@@ -14,7 +14,7 @@ This is just a proof of concept, it is **not** production ready, bugs should be 
 ## Install
 - Download this repo and extract it.
 - Go to [WallpaperOverlay](https://github.com/rishuinfinity/WallpaperOverlay), download the repo, extract it.
-- Go to the extracted folder from ```WallpaperOverlay``` and copy the folder ```overlays```, located at ```src\overlay```, to ```woverlay``` root folder.
+- Go to the extracted folder from ```WallpaperOverlay``` and copy the folder ```overlays```, located at ```src\overlays```, to ```woverlay``` root folder.
 - Open ```settings.ini``` at ```woverlay root``` folder and change to your display resolution. The default is ```1920x1080```.
 - Open ```woverlay.ahk``` and you are good to go!
 

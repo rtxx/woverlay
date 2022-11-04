@@ -11,6 +11,8 @@ Heavily infuenced by the awesome extension for GNOME DE [WallpaperOverlay](https
 |  ![Rectangule Emboss Auto Color](https://raw.githubusercontent.com/rtxx/woverlay/main/me_alliance_1920x1080_Rectangle%20Emboss_%23BFC3C9.png) |  ![Rectangule Emboss Manual Color](https://raw.githubusercontent.com/rtxx/woverlay/main/me_alliance_1920x1080_Rectangle%20Emboss_%2341608f.png) |
 
  [Image source](https://www.deviantart.com/solidcell/art/Alliance-Wallpaper-1-608622575)
+| ![woverlay](https://raw.githubusercontent.com/rtxx/woverlay/main/woverlay.png) |
+|---|
 
 ## Warning! Here be dragons! Proceed with caution!
 This is just a proof of concept, it is **not** production ready, bugs should be expected! I only tested on my machine, so YMMV.

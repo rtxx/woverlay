@@ -325,7 +325,7 @@ makeImg(imgPath,overlayTempPath)
   ; if we dont make the image, then ii uses the wallpaper already avaiable.
   checkWallpaper = %wallpaperDir%\%OutNameNoExt%_%displayRes%_%overlayNameWithoutExt%_%lastOverlayColor%.png
   ; Replaces all spaces with '_' on the final file name
-  checkWallpaper := StrReplace(checkWallpaper, A_Space, "_")
+  ;checkWallpaper := StrReplace(checkWallpaper, A_Space, "_")
   if FileExist(checkWallpaper)
   {
     MsgBox, 4, Attention!, Wallpaper with selected overlay and colors already exists!`nFound at: %checkWallpaper%`nDo you want to make a new the image anyway?
@@ -334,7 +334,7 @@ makeImg(imgPath,overlayTempPath)
       ; Sets the name for the final wallpaper image
       finalImg = %wallpaperDir%\%OutNameNoExt%_%displayRes%_%overlayNameWithoutExt%_%lastOverlayColor%.png
       ; Replaces all spaces with '_' on the final file name
-      finalImg := StrReplace(finalImg, A_Space, "_")
+      ;finalImg := StrReplace(finalImg, A_Space, "_")
       
       commands=
       (	join&
@@ -363,7 +363,7 @@ makeImg(imgPath,overlayTempPath)
       ; Sets the name for the final wallpaper image
       finalImg = %wallpaperDir%\%OutNameNoExt%_%displayRes%_%overlayNameWithoutExt%_%lastOverlayColor%.png
       ; Replaces all spaces with '_' on the final file name
-      finalImg := StrReplace(finalImg, A_Space, "_")
+      ;finalImg := StrReplace(finalImg, A_Space, "_")
       Return finalImg
     }
   }
@@ -372,7 +372,7 @@ makeImg(imgPath,overlayTempPath)
     ; Sets the name for the final wallpaper image
     finalImg = %wallpaperDir%\%OutNameNoExt%_%displayRes%_%overlayNameWithoutExt%_%lastOverlayColor%.png
     ; Replaces all spaces with '_' on the final file name
-    finalImg := StrReplace(finalImg, A_Space, "_")
+    ;finalImg := StrReplace(finalImg, A_Space, "_")
     
     commands=
     (	join&

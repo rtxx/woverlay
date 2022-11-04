@@ -9,6 +9,7 @@ This is just a proof of concept, it is **not** production ready, bugs should be 
 ## Requirements
 - [AHK](https://www.autohotkey.com/)
 - [Magick Image](https://imagemagick.org/)
+  - Note: Be sure that magic is on ```PATH```. The installer has this option enable by default.
 
 ## Install
 - Download this repo and extract it.

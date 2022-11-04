@@ -182,8 +182,12 @@ imgPicker(useLastWallpaper)
   }
   else
   {
+    ; Reads last wallpaper location and open file explorer dialog with it
+    IniRead lastWallpaper, settings.ini, WOVERLAY, lastWallpaper
+	  SplitPath, lastWallpaper, OutFileName, OutDir, OutExtension, OutNameNoExt, OutDrive
+    
     ; Opens file explorer dialog, only shows pngs and jpgs
-    FileSelectFile, SelectedFile, 3, , Open wallpaper, Images (*.png; *.jpg; *.jpeg)
+    FileSelectFile, SelectedFile, 3, %OutDir%, Open wallpaper, Images (*.png; *.jpg; *.jpeg)
     ; If the user cancels, set the image path to empty
     if (SelectedFile = "")
     {

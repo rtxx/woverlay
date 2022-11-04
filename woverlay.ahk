@@ -1,4 +1,4 @@
-﻿#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
+#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
@@ -54,7 +54,9 @@ Menu, Tray, Add, Change overlay, TrayMenu
 Menu, Tray, Add ; separator
 Menu, Tray, Add, Redo last wallpaper, TrayMenu
 Menu, Tray, Add ; separator
-Menu, Tray, Add, Reload, TrayMenu
+Menu, Tray, Add, Open settings.ini, TrayMenu
+Menu, Tray, Add ; separator
+Menu, Tray, Add, Reload script, TrayMenu
 Menu, Tray, Add, Exit, TrayMenu
 Return
 
@@ -129,8 +131,19 @@ TrayMenu:
     Return
   }
 
+  ; Open settings.ini
+  if A_ThisMenuItem = Open settings.ini
+  {
+    ; Opens settings.ini and waits to close it
+    RunWait, %A_ScriptDir%\settings.ini
+    TrayTip, woverlay, Reloading script... , 1, 1
+    ; Reloads the script to load settings.ini again
+    Reload
+    ;Return
+  }
+  
   ; Reloads the script
-  if A_ThisMenuItem = Reload
+  if A_ThisMenuItem = Reload script
   {
     Reload
     Sleep 1000 ; If successful, the reload will close this instance during the Sleep, so the line below will never be reached.

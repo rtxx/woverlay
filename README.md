@@ -37,3 +37,12 @@ In ```settings.ini``` there are some options we can change:
 
 ## Run it
 Right click the tray icon. All the options are self-explanatory. Double click opens ```woverlay``` script folder.
+
+## Bonus tip
+Use [TranslucentTB](https://www.microsoft.com/store/productId/9PF4KZ2VN4W9) from Microsft Store to have a translucent taskbar. With that and the solid color from the overlays, I think it makes a pretty sweet combination! Check it out:
+
+| Regular Desktop | [TranslucentTB](https://www.microsoft.com/store/productId/9PF4KZ2VN4W9) |
+|---|---|
+| ![Regular Desktop](https://cloud.ducknexus.xyz/apps/files_sharing/publicpreview/fGoWE5yBiT8YPzN?x=1920&y=605&a=true&file=desktop_normal.png&scalingup=0) | ![TranslucentTB](https://cloud.ducknexus.xyz/apps/files_sharing/publicpreview/spqJsfbWTRmroDo?x=1920&y=605&a=true&file=desktop_normal_translucenttb.png&scalingup=0) |
+| With TTB + woverlay + half pellet left  | With TTB + woverlay + round edges bottom  |
+| ![TTB + woverlay + half pellet left](https://cloud.ducknexus.xyz/apps/files_sharing/publicpreview/JCeMXJd9cRaoBWK?x=1920&y=605&a=true&file=desktop_halfpelletleft_translucenttb.png&scalingup=0)  | ![TTB + woverlay + round edges bottom](https://cloud.ducknexus.xyz/apps/files_sharing/publicpreview/Snk7efodpBKbfcx?x=1920&y=605&a=true&file=desktop_roundedgesbottom_translucenttb.png&scalingup=0)  |

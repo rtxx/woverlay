@@ -19,6 +19,8 @@ global finalImg
 global overlayPath
 global overlayTempPath
 global wallpaperDir
+global overlayName
+global lastOverlayName
 global overlayColor
 global displayRes
 global cacheDir
@@ -32,8 +34,8 @@ setGlobals()
   overlayTempPath = ""
   cacheDir = %A_ScriptDir%\cache
   wallpaperDir = %A_ScriptDir%\wallpapers
-  
-  IniRead overlayName, settings.ini, WOVERLAY, overlayName
+
+  IniRead overlayName, settings.ini, WOVERLAY, overlayName 
   IniRead overlayColor, settings.ini, WOVERLAY, overlayColor
   IniRead displayRes, settings.ini, WOVERLAY, displayRes
   
@@ -50,6 +52,9 @@ Menu, Tray, Add, woverlay, TrayMenu
 Menu, Tray, Default, woverlay
 Menu, Tray, Icon, C:\Windows\system32\shell32.dll,141, TrayMenu
 Menu, Tray, Add, Change wallpaper, TrayMenu
+Menu, Tray, Add ; separator
+Menu, Tray, Add, %overlayName%, TrayMenu
+Menu, Tray, Disable, %overlayName%
 Menu, Tray, Add, Change overlay, TrayMenu
 Menu, Tray, Add ; separator
 Menu, Tray, Add, Redo last wallpaper, TrayMenu
@@ -226,9 +231,12 @@ overlayPicker(userSelect)
     else
     {
       ; Gets selected overlay name without extension
-	    SplitPath, SelectedFile, OutFileName, OutDir, OutExtension, OutNameNoExt, OutDrive
+      SplitPath, SelectedFile, OutFileName, OutDir, OutExtension, OutNameNoExt, OutDrive
+      ; Renames tray icon menu entry for current overlay in use
+      IniRead overlayName, settings.ini, WOVERLAY, overlayName
+      Menu, Tray, Rename, %overlayName%, %OutFileName%
       ; Sets selected overlay to settings.ini
-	    IniWrite, %OutFileName%, settings.ini, WOVERLAY, overlayName
+      IniWrite, %OutFileName%, settings.ini, WOVERLAY, overlayName
       ; tray tip to inform the user
       TrayTip, woverlay, Next wallpaper will use '%OutFileName%'. , 1, 1
     }
